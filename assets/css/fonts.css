@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: 'FacitWeb-Light';
+    src: url("../wf/facitweb/FL.eot");
+    src: url("../wf/facitweb/FL.eot?#iefix") format("embedded-opentype"), url("../wf/facitweb/FL.woff") format("woff"), url("../wf/facitweb/FL.ttf") format("truetype");
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'FacitWeb-Light';
+    src: url("../wf/facitweb/FL-i.eot");
+    src: url("../wf/facitweb/FL-i.eot?#iefix") format("embedded-opentype"), url("../wf/facitweb/FL-i.woff") format("woff"), url("../wf/facitweb/FL-i.ttf") format("truetype");
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'FacitWeb-Semibold';
+    src: url("../wf/facitweb/FSB.eot");
+    src: url("../wf/facitweb/FSB.eot?#iefix") format("embedded-opentype"), url("../wf/facitweb/FSB.woff") format("woff"), url("../wf/facitweb/FSB.ttf") format("truetype");
+    font-style: normal;
+}
