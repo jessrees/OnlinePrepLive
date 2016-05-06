@@ -51,7 +51,7 @@
 </head>
 <body>
 
-	<div class="banner no-bg">
+	<div class="banner ">
 		<div class="container">
 			<div class="row">
 
@@ -64,8 +64,37 @@
 						<img src="../assets/img/kaplan-logo.png" alt="" class="logo-lower small">
 					</div>
 				</div>
-
 			</div>
+			<div class="row">
+
+				<div class="col-md-8">
+					<h3 class="text-center event-title">Introduction to STEM Concepts</h2>
+
+					<iframe id="video" width="100%" height="420" src="https://www.youtube.com/embed/G_4_TRI-OY0?rel=0&autoplay=1&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+				</div>
+
+				<div class="col-md-4">
+						<div class="tabs">
+							<div class="js-tab tab active" id="tab-1">Chat</div>
+							<div class="js-tab tab" id="tab-2">Poll</div>
+						</div>
+						<div class="js-tab-content" id="content-tab-1" >
+							<iframe width="100%" height="420" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" allowtransparency="true" src="http://rb1.chatroll.com/embed/chat/onlinepreplive?id=YPzGQ2ExVqo&platform=html"></iframe>
+						</div>
+						<div class="js-tab-content" id="content-tab-2" style="display:none;">
+							<div class="poll-placeholder">Poll</div>
+						</div>
+									
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-xs-12 text-center">
+					<p>Click <a href="http://bit.ly/1SzR3JO" target="_blank">here</a> to download the transcript</p>
+				</div>
+			</div>
+
+		
 
 
 		</div>
@@ -77,33 +106,17 @@
 
 			<div class="row extra-top-space extra-bottom-space">
 				<div class="col-xs-12">
-					<h3 class="text-center event-title">Introduction to STEM Concepts</h2>
 					<div class=" text">
 						Your score report provides lots of great information beyond just your ACT Composite Score. This session will help you better understand what your ACT score means and how your score report can help you plan your possible next steps.
 					</div>
 				</div>
 			</div>
 			
-			<div class="row">
-				<div class="col-md-8">
-					<iframe id="video" width="100%" height="420" src="https://www.youtube.com/embed/G_4_TRI-OY0?rel=0&autoplay=1&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
-				</div>
 
-				<div class="col-md-4">
-						<iframe width="100%" height="420" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" allowtransparency="true" src="http://rb1.chatroll.com/embed/chat/onlinepreplive?id=YPzGQ2ExVqo&platform=html"></iframe>			
-				</div>
-				
-			</div>
 
 			<div class="col-sm-8 col-sm-offset-2">
 
-				<div class="row">
-					<div class="col-xs-12 text-center">
-						<p>Click <a href="http://bit.ly/1SzR3JO" target="_blank">here</a> to download the transcript</p>
-							<div class="text extra-bottom-space">
-						</div>
-					</div>
-				</div>
+
 
 				<div class="row">
 					<div class="col-xs-12 col-sm-6 student-left border">
@@ -137,21 +150,29 @@
 
 
 	<script>
+	
+		//tab funtion
+		$( ".js-tab" ).click(function() {
+			$(".js-tab").removeClass("active");
+			$(this).addClass("active");
+			$(".js-tab-content").hide();
+			$("#content-"+this.id).show();
+		});
 
 
-	$(function(e) {
-		$(window).resize(function(e) {
-			console.log('resize');
-			width = $('#video').width()
+		$(function(e) {
+			$(window).resize(function(e) {
+				console.log('resize');
+				width = $('#video').width()
 
 
-			height = (width/16)*9+"px";
-			console.log(height);
+				height = (width/16)*9+"px";
+				console.log(height);
 
-			$('#video').css({"height":height})
+				$('#video').css({"height":height})
 
+			})
 		})
-	})
 
 
 	</script>

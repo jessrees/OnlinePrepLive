@@ -215,10 +215,10 @@ ul {
   }
   
   .event-title{
-    color:#fff;
-    font-weight: 100;
+    color:#1d2172;
     font-size: 20px;
-    margin-top: 8px;
+    margin-top: 15px;
+    margin-bottom: 5px;
   }
 
   .headline-logos{
@@ -246,6 +246,30 @@ ul {
     margin-top: 40px;
   }
   
+  .tab{
+    float: left;
+    height: 30px;
+    margin-top: 20px;
+    padding-top: 5px;
+    width: 50%;
+    background-color: #2badd9;
+    color: #fff;
+    text-align: center;
+  }
+  .tab:hover{
+    background-color: #2e338c;
+  }
+  .tab.active{
+    background-color: #1d2172;
+  }
+
+  .poll-placeholder{
+    height: 100%;
+    padding:30px;
+    width: 100px;
+    background-color: #fff;
+    float: left;
+  }
   .countdown{
     font-family: "FacitWeb-light", "lucida grande", sans-serif;
     color: #051932;
