@@ -302,13 +302,11 @@ ul {
 
 
 .past_event {
-  background-color: rgba(255,255,255,.5);
+  background-color: rgba(255,255,255,.2);
   border-radius: 5px;
   padding: 10px;
   color: #fff;
-  position: relative;
-  top: 45px;
-  margin-bottom: 55px;
+  margin: 0 20px;
 }
 
 
@@ -359,7 +357,7 @@ ul {
   .student-right{
     color: #fff;
     padding-left: 50px;
-    padding-bottom: 10px;
+    padding-bottom: 20px;
 
   }
 
