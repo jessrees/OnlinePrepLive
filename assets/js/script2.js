@@ -36,7 +36,7 @@ function initializeClock(id, deadline) {
 
 $(function(){ 
 
-	var deadline = new Date(Date.UTC(2016,04,11,23,00,00));var myLocalDate = new Date(deadline);
+  var deadline = new Date(Date.UTC(2016,04,22,18,00,00));var myLocalDate = new Date(deadline);
 	initializeClock('countdown', deadline);
 
 
