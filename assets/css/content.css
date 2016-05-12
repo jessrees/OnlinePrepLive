@@ -308,6 +308,13 @@ ul {
   color: #fff;
   margin: 0 20px;
 }
+.past_event_dark {
+  background-color: rgba(5, 25, 50, .8);
+  border-radius: 5px;
+  padding: 10px;
+  color: #fff;
+  margin: 0 20px;
+}
 
 
 /*-------------------
