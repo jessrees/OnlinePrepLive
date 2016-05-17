@@ -121,7 +121,7 @@ ul {
     color: #fff;
     font-family: "FacitWeb", "lucida grande", sans-serif;
     padding: 5px 15px;
-    margin-top: 20px;
+    margin-top: 10px;
     display: inline-block;
     text-decoration: none;
     height::;6px;
@@ -201,6 +201,7 @@ ul {
     background-image: url("../img/act-background.png");
     background-size: cover;
     background-size: 300px;
+    padding-bottom: 20px;
   }
   
   .banner.no-bg{
@@ -215,10 +216,10 @@ ul {
   }
   
   .event-title{
-    color:#1d2172;
+    color:#2e338c;
     font-size: 20px;
     margin-top: 15px;
-    margin-bottom: 5px;
+    margin-bottom: 20px;
   }
 
   .headline-logos{
@@ -246,25 +247,42 @@ ul {
     margin-top: 40px;
   }
   
+  .tabs{
+    margin: 10px;
+  }
   .tab{
     float: left;
-    height: 30px;
-    margin-top: 20px;
-    padding-top: 5px;
-    width: 50%;
-    background-color: #2badd9;
+    height: 40px;
+    margin-top: 10px;
+    padding-top: 10px;
+    width: 49%;
+    background-color: #2e338c;
+    opacity: .8;
+    margin-right: 1%;
     color: #fff;
     text-align: center;
+    margin-bottom: 1px;
+    border-radius: 3px 3px 0px 0px;
   }
   .tab:hover{
-    background-color: #2e338c;
+    background-color: #051932;
+    opacity: 1;
+
   }
   .tab.active{
     background-color: #1d2172;
+    opacity: 1;
+
+  }
+
+  .tab-content{
+    padding:0px 10px 5px 10px;
+    background-color: #ccc;
+    border-radius: 2px;
   }
 
   .poll-placeholder{
-    height: 100%;
+    height: 10px;
     padding:30px;
     width: 100px;
     background-color: #fff;
@@ -355,6 +373,12 @@ ul {
     padding-right: 50px;
     color: #fff;
     padding-bottom: 10px;
+  }
+
+  .past-events{
+    color: #fff;
+    margin-bottom: 20px;
+    margin-top: 20px;
   }
 
   .student-left.border{
