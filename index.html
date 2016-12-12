@@ -89,10 +89,10 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 						<div class="js-tab tab" id="tab-2">Poll</div>
 					</div>
 					<div class="js-tab-content tab-content" id="content-tab-1" >
-						<!-- <iframe width="100%" height="420" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" allowtransparency="true" src="http://rb1.chatroll.com/embed/chat/onlinepreplive?id=YPzGQ2ExVqo&platform=html"></iframe> -->
+						<iframe width="100%" height="420" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" allowtransparency="true" src="http://rb1.chatroll.com/embed/chat/onlinepreplive?id=YPzGQ2ExVqo&platform=html"></iframe>
 					</div>
 					<div class="js-tab-content tab-content" id="content-tab-2" style="display:none;">
-						<!-- <iframe width="100%" height="420" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://app.meetingpulse.net/attendee/opl-burst#polls"></iframe> -->
+						<iframe width="100%" height="420" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://app.meetingpulse.net/attendee/opl-burst#polls"></iframe>
 					</div>
 				</div>
 			</div>
@@ -283,59 +283,88 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
 
 
-	<script>
-	 	$( "#fsSubmitButton2532822" ).click(function() {
-            event.preventDefault();
-            var first = document.getElementById('field47494950-first').value; 
-            var last = document.getElementById('field47494950-last').value; 
-            var email = document.getElementById('field47494954').value; 
-
-            if ( email == "" ) || ( first == "" ) || ( last == "" ) {
-              $(this).hide();
-            } else {
-                 document.getElementById("fsForm2532822").submit();
-            }
-
-      });
+	
 
 
-		//tab funtion
-		// $( ".js-tab" ).click(function() {
-		// 	$(".js-tab").removeClass("active");
-		// 	$(this).addClass("active");
-		// 	$(".js-tab-content").hide();
-		// 	$("#content-"+this.id).show();
-		// });
-
-
-		// $(function(e) {
-		// 	$(window).resize(function(e) {
-		// 		console.log('resize');
-		// 		width = $('#video').width()
-
-
-		// 		height = (width/16)*9+"px";
-		// 		console.log(height);
-
-		// 		$('#video').css({"height":height})
-
-		// 	})
-		// })
-
-
-
-
-
-	</script>
-
-
-   	<div class="overlay">hi</div>
+   	<div class="overlay"></div>
 	<div class="modal">
 		<div class="modal-body">
 			<script type="text/javascript" src="https://kaplan_gre.formstack.com/forms/js.php/opl_marketing"></script><noscript><a href="https://kaplan_gre.formstack.com/forms/opl_marketing" title="Online Form">Online Form - OPL Marketing</a></noscript>
 			</div>
 	</div>
   
+
+
+<script>
+
+checkCookie()
+
+function checkCookie() {
+    var visited=getCookie("visited");
+    if (visited!="") {
+        console.log("welcome back");
+    } else {
+      	$(".overlay").fadeIn("slow");
+      	$(".modal").fadeIn("slow");
+    }
+}
+
+function getCookie(cookieName) {
+    var name = cookieName + "=";
+    var ca = document.cookie.split(';');
+    for(var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
+
+function setCookie(cname, cvalue, exdays) {
+    var d = new Date();
+    d.setTime(d.getTime() + (exdays*24*60*60*1000));
+    var expires = "expires="+d.toUTCString();
+    document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+$( "#fsSubmitButton2532822" ).click(function() {
+	event.preventDefault();
+	setCookie("visited", "true", 365);
+	document.getElementById("fsForm2532822").submit();
+});
+
+
+		// tab funtion
+		$( ".js-tab" ).click(function() {
+			$(".js-tab").removeClass("active");
+			$(this).addClass("active");
+			$(".js-tab-content").hide();
+			$("#content-"+this.id).show();
+		});
+
+
+		$(function(e) {
+			$(window).resize(function(e) {
+				console.log('resize');
+				width = $('#video').width()
+
+
+				height = (width/16)*9+"px";
+				console.log(height);
+
+				$('#video').css({"height":height})
+
+			})
+		})
+
+</script>
+
+
+
 
 <style>
 			
