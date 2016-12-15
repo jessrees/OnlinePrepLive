@@ -306,6 +306,17 @@ function checkCookie() {
     } else {
       	$(".overlay").fadeIn("slow");
       	$(".modal").fadeIn("slow");
+
+		//set cookie for return visitors
+		$( "#fsForm2532822" ).submit(function() {
+			setCookie("visited", "true", 365);
+		});
+		
+		// submit button doesnt activate until page is fully loaded
+		$( window ).load(function() { 
+		  	$("#fsSubmitButton2532822").css( "pointer-events", "all" );
+		})
+
     }
 }
 
@@ -330,13 +341,6 @@ function setCookie(cname, cvalue, exdays) {
     var expires = "expires="+d.toUTCString();
     document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
 }
-
-$( "#fsSubmitButton2532822" ).click(function() {
-	event.preventDefault();
-	setCookie("visited", "true", 365);
-	document.getElementById("fsForm2532822").submit();
-});
-
 
 		// tab funtion
 		$( ".js-tab" ).click(function() {
@@ -370,6 +374,10 @@ $( "#fsSubmitButton2532822" ).click(function() {
 			
 		/*FORMSTACK OVERRIDES*/
 		
+		#fsSubmitButton2532822 {
+			pointer-events: none;
+		}
+
 		.fsBody .fsForm .fsSectionHeading {
 		    margin-bottom: 10px;
 		    color: #2badd9;
